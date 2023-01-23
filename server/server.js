@@ -3,6 +3,8 @@ require('dotenv').config({ path: './config.env' });
 
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 // get MongoDB driver connection
 // const dbo = require('./db/conn');
 
