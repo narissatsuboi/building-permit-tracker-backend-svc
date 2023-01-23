@@ -13,6 +13,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : false}));
+app.use(cookieParser());
 app.use(require('./routes/record'));
 
 // Global error handling
