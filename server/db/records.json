@@ -1,0 +1,797 @@
+[
+    {
+        "id": 11111,
+        "address": {
+            "street": "9587 Carter Lodge",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2021-06-10T11:11:06.425Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Issued",
+        "applicantId": "755582789",
+        "applicant": "Jim Feest",
+        "financiallyResponsibleParty": "Harriet Blanda"
+    },
+    {
+        "id": 11112,
+        "address": {
+            "street": "694 Dylan Cape",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2018-03-05T08:15:25.600Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Action Required",
+        "applicantId": "103816069",
+        "applicant": "Terrence Aufderhar",
+        "financiallyResponsibleParty": "Jill Kilback"
+    },
+    {
+        "id": 11113,
+        "address": {
+            "street": "822 Drew Throughway",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2020-06-17T08:14:01.346Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Approved",
+        "applicantId": "725080196",
+        "applicant": "Nellie Keeling",
+        "financiallyResponsibleParty": "Diane Brown"
+    },
+    {
+        "id": 11114,
+        "address": {
+            "street": "46364 Dereck Inlet",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2020-01-26T01:27:41.182Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Action Required",
+        "applicantId": "990456411",
+        "applicant": "Rudolph Gerhold",
+        "financiallyResponsibleParty": "Adam Krajcik"
+    },
+    {
+        "id": 11115,
+        "address": {
+            "street": "5441 Zion Spring",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2018-10-13T03:59:58.926Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "664484236",
+        "applicant": "Tracy Schoen",
+        "financiallyResponsibleParty": "Jaime Littel"
+    },
+    {
+        "id": 11116,
+        "address": {
+            "street": "7632 Hulda Prairie",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2021-02-18T12:54:37.491Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "334382389",
+        "applicant": "Leo Barrows",
+        "financiallyResponsibleParty": "Seth Lehner"
+    },
+    {
+        "id": 11117,
+        "address": {
+            "street": "7684 Lehner Vista",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2020-06-05T12:03:43.763Z",
+        "closedDate": "2022-03-12T21:10:40.059Z",
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "059134825",
+        "applicant": "Marianne Nicolas",
+        "financiallyResponsibleParty": "Donald Bartell"
+    },
+    {
+        "id": 11118,
+        "address": {
+            "street": "776 Dooley Court",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-08-24T22:41:22.540Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Action Required",
+        "applicantId": "140680040",
+        "applicant": "Max Purdy",
+        "financiallyResponsibleParty": "Arnold Heller"
+    },
+    {
+        "id": 11119,
+        "address": {
+            "street": "509 Pagac Trafficway",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2020-05-27T05:07:40.222Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Review",
+        "applicantId": "289503074",
+        "applicant": "Leigh Heidenreich",
+        "financiallyResponsibleParty": "Maryann Lakin"
+    },
+    {
+        "id": 11120,
+        "address": {
+            "street": "74173 Grimes Village",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-12-04T09:18:37.988Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Issued",
+        "applicantId": "370590356",
+        "applicant": "Corey Kuhn",
+        "financiallyResponsibleParty": "Kerry Langworth"
+    },
+    {
+        "id": 11121,
+        "address": {
+            "street": "501 Dietrich Prairie",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-10-15T11:50:54.961Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Issued",
+        "applicantId": "058330237",
+        "applicant": "Kyle Heaney",
+        "financiallyResponsibleParty": "Nicholas Sipes"
+    },
+    {
+        "id": 11122,
+        "address": {
+            "street": "233 Luther Drive",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-06-05T03:14:35.791Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Action Required",
+        "applicantId": "784479288",
+        "applicant": "Evelyn Gottlieb",
+        "financiallyResponsibleParty": "Laurence Feeney"
+    },
+    {
+        "id": 11123,
+        "address": {
+            "street": "18711 Dooley Vista",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2022-10-24T09:25:17.362Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "759205679",
+        "applicant": "Israel Stokes",
+        "financiallyResponsibleParty": "Tracey Walter"
+    },
+    {
+        "id": 11124,
+        "address": {
+            "street": "055 Claudine Square",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2023-01-11T22:50:10.517Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "In Review",
+        "applicantId": "234461638",
+        "applicant": "Chad Ebert",
+        "financiallyResponsibleParty": "Barry Smitham"
+    },
+    {
+        "id": 11125,
+        "address": {
+            "street": "14038 Reichert Burg",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2022-07-14T10:24:26.964Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Correction",
+        "applicantId": "547530341",
+        "applicant": "Oscar Kunde",
+        "financiallyResponsibleParty": "Vickie Schinner"
+    },
+    {
+        "id": 11126,
+        "address": {
+            "street": "33440 Reynolds Hills",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2021-08-19T20:51:11.858Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Action Required",
+        "applicantId": "010356274",
+        "applicant": "Leticia Reichel",
+        "financiallyResponsibleParty": "Helen Aufderhar"
+    },
+    {
+        "id": 11127,
+        "address": {
+            "street": "9834 Micaela Place",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2019-05-09T16:47:05.815Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Issued",
+        "applicantId": "619160487",
+        "applicant": "Doreen McDermott",
+        "financiallyResponsibleParty": "Chad Macejkovic"
+    },
+    {
+        "id": 11128,
+        "address": {
+            "street": "715 Feil Inlet",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2022-08-08T10:26:25.546Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Approved",
+        "applicantId": "508895579",
+        "applicant": "Salvador Beatty",
+        "financiallyResponsibleParty": "Clifford Renner"
+    },
+    {
+        "id": 11129,
+        "address": {
+            "street": "6560 Gunner Inlet",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2019-05-03T14:21:30.253Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Correction",
+        "applicantId": "724856168",
+        "applicant": "Valerie Macejkovic",
+        "financiallyResponsibleParty": "Rita Schimmel"
+    },
+    {
+        "id": 11130,
+        "address": {
+            "street": "21446 Jacobs Lodge",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-02-25T22:14:49.625Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Action Required",
+        "applicantId": "021414744",
+        "applicant": "Pat Bayer",
+        "financiallyResponsibleParty": "Sherri Feeney"
+    },
+    {
+        "id": 11131,
+        "address": {
+            "street": "57168 Mabelle Coves",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2018-12-23T12:13:08.893Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Submitted",
+        "applicantId": "068288767",
+        "applicant": "Kelly Bergstrom",
+        "financiallyResponsibleParty": "Desiree Hilpert"
+    },
+    {
+        "id": 11132,
+        "address": {
+            "street": "866 Adell Plaza",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2021-09-29T01:18:06.906Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Action Required",
+        "applicantId": "547593778",
+        "applicant": "Meghan Daniel",
+        "financiallyResponsibleParty": "Archie Graham"
+    },
+    {
+        "id": 11133,
+        "address": {
+            "street": "5484 Bethel Camp",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2019-02-12T11:06:16.800Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Issued",
+        "applicantId": "550275919",
+        "applicant": "Mercedes Kerluke",
+        "financiallyResponsibleParty": "Laura Feest"
+    },
+    {
+        "id": 11134,
+        "address": {
+            "street": "18967 Shanelle Mountain",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2023-01-10T11:21:09.544Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Action Required",
+        "applicantId": "725520716",
+        "applicant": "Gabriel Hickle",
+        "financiallyResponsibleParty": "Alice Weimann"
+    },
+    {
+        "id": 11135,
+        "address": {
+            "street": "3751 Otha Square",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2019-12-19T01:44:30.143Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Approved",
+        "applicantId": "480041101",
+        "applicant": "Geneva West",
+        "financiallyResponsibleParty": "Donald Hyatt"
+    },
+    {
+        "id": 11136,
+        "address": {
+            "street": "0137 Wunsch Corner",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2018-04-27T03:36:30.456Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Approved",
+        "applicantId": "639643549",
+        "applicant": "Lindsey Lind",
+        "financiallyResponsibleParty": "Erik Harris"
+    },
+    {
+        "id": 11137,
+        "address": {
+            "street": "3226 Morar Dam",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2021-04-21T21:10:33.523Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Submitted",
+        "applicantId": "477529129",
+        "applicant": "Delores Swift",
+        "financiallyResponsibleParty": "Freda Macejkovic"
+    },
+    {
+        "id": 11138,
+        "address": {
+            "street": "151 Waelchi Glens",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2020-01-28T02:33:51.813Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Submitted",
+        "applicantId": "371515141",
+        "applicant": "Conrad Reinger",
+        "financiallyResponsibleParty": "William Nicolas"
+    },
+    {
+        "id": 11139,
+        "address": {
+            "street": "400 Gutmann Turnpike",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2018-05-25T15:13:03.604Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Correction",
+        "applicantId": "121671147",
+        "applicant": "Christy Bartell",
+        "financiallyResponsibleParty": "Austin Kshlerin"
+    },
+    {
+        "id": 11140,
+        "address": {
+            "street": "7984 Aida Stream",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2018-12-31T11:17:10.308Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "603092865",
+        "applicant": "Brian Schoen",
+        "financiallyResponsibleParty": "Melba Gislason"
+    },
+    {
+        "id": 11141,
+        "address": {
+            "street": "4324 Madisen Court",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2018-02-18T02:43:43.449Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Submitted",
+        "applicantId": "816493413",
+        "applicant": "Georgia Hand",
+        "financiallyResponsibleParty": "Terri Morar"
+    },
+    {
+        "id": 11142,
+        "address": {
+            "street": "9901 Daugherty Plaza",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2020-10-25T19:12:28.685Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Review",
+        "applicantId": "683263305",
+        "applicant": "Geraldine West",
+        "financiallyResponsibleParty": "Vicki Prosacco"
+    },
+    {
+        "id": 11143,
+        "address": {
+            "street": "14439 Ankunding Streets",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2022-01-20T00:39:34.902Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "196085132",
+        "applicant": "Isaac Yundt",
+        "financiallyResponsibleParty": "Kendra Jacobi"
+    },
+    {
+        "id": 11144,
+        "address": {
+            "street": "70080 Moore Walks",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2018-03-31T17:39:07.589Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "In Review",
+        "applicantId": "019925703",
+        "applicant": "Julio Botsford",
+        "financiallyResponsibleParty": "Jody Jacobs"
+    },
+    {
+        "id": 11145,
+        "address": {
+            "street": "78118 Berge Turnpike",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2020-08-10T13:37:17.024Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "In Review",
+        "applicantId": "535536627",
+        "applicant": "Candace Conroy",
+        "financiallyResponsibleParty": "Mamie Cremin"
+    },
+    {
+        "id": 11146,
+        "address": {
+            "street": "441 Lucy Mountain",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2020-07-20T17:22:23.433Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Correction",
+        "applicantId": "908021311",
+        "applicant": "Bernadette Greenfelder",
+        "financiallyResponsibleParty": "Guadalupe Gaylord"
+    },
+    {
+        "id": 11147,
+        "address": {
+            "street": "2902 Roderick Gateway",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2019-04-26T23:43:23.558Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "Action Required",
+        "applicantId": "991189570",
+        "applicant": "Erick Kuhic",
+        "financiallyResponsibleParty": "Franklin D'Amore"
+    },
+    {
+        "id": 11148,
+        "address": {
+            "street": "37863 Yasmeen Cape",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2019-07-31T02:25:29.824Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "929792689",
+        "applicant": "Harvey MacGyver",
+        "financiallyResponsibleParty": "Angela King"
+    },
+    {
+        "id": 11149,
+        "address": {
+            "street": "004 Ignacio Station",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2018-10-22T06:04:01.238Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Action Required",
+        "applicantId": "529139767",
+        "applicant": "Isabel Aufderhar",
+        "financiallyResponsibleParty": "Wilma Nicolas"
+    },
+    {
+        "id": 11150,
+        "address": {
+            "street": "466 Robel Parkways",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2019-06-25T07:00:28.369Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Approved",
+        "applicantId": "415036016",
+        "applicant": "Martin Aufderhar",
+        "financiallyResponsibleParty": "Dianne Krajcik"
+    },
+    {
+        "id": 11151,
+        "address": {
+            "street": "2590 Harber Harbors",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-12-26T13:05:13.857Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Correction",
+        "applicantId": "221680096",
+        "applicant": "Mandy Crooks",
+        "financiallyResponsibleParty": "Eileen Schmitt"
+    },
+    {
+        "id": 11152,
+        "address": {
+            "street": "153 Xander Parkway",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2021-01-01T07:07:00.026Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "880808672",
+        "applicant": "Dale Terry",
+        "financiallyResponsibleParty": "Elizabeth Nicolas"
+    },
+    {
+        "id": 11153,
+        "address": {
+            "street": "5770 Balistreri Port",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2018-02-03T18:55:03.222Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "In Correction",
+        "applicantId": "519746755",
+        "applicant": "Frederick Pollich",
+        "financiallyResponsibleParty": "Jenny Douglas"
+    },
+    {
+        "id": 11154,
+        "address": {
+            "street": "8132 Welch Meadows",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2019-09-02T01:19:10.831Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "Issued",
+        "applicantId": "351303998",
+        "applicant": "Velma Kutch",
+        "financiallyResponsibleParty": "Nicole Nader"
+    },
+    {
+        "id": 11155,
+        "address": {
+            "street": "35349 Sanford Junction",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2020-11-10T21:24:31.895Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Approved",
+        "applicantId": "280507503",
+        "applicant": "Charlotte Rippin",
+        "financiallyResponsibleParty": "Casey Turner"
+    },
+    {
+        "id": 11156,
+        "address": {
+            "street": "442 Ellsworth Cliff",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2019-02-03T12:40:15.891Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "In Correction",
+        "applicantId": "387169917",
+        "applicant": "Maurice Corwin",
+        "financiallyResponsibleParty": "Ben Orn"
+    },
+    {
+        "id": 11157,
+        "address": {
+            "street": "2802 Stanton Streets",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2020-08-03T11:35:17.519Z",
+        "closedDate": null,
+        "constructionType": "New Construction",
+        "status": "In Review",
+        "applicantId": "768901207",
+        "applicant": "Lawrence Dooley",
+        "financiallyResponsibleParty": "Cassandra Schowalter"
+    },
+    {
+        "id": 11158,
+        "address": {
+            "street": "4801 Madisyn Forges",
+            "city": "Seattle",
+            "zip": "98116"
+        },
+        "assignedDate": "2021-03-10T14:03:53.762Z",
+        "closedDate": "2020-08-29T10:38:58.962Z",
+        "constructionType": "Street Use",
+        "status": "Action Required",
+        "applicantId": "157223257",
+        "applicant": "Darlene Jacobi",
+        "financiallyResponsibleParty": "Audrey Champlin"
+    },
+    {
+        "id": 11159,
+        "address": {
+            "street": "327 Johnson Key",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2022-04-28T12:31:06.287Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Approved",
+        "applicantId": "327461057",
+        "applicant": "Freda Bartell",
+        "financiallyResponsibleParty": "Kara Goodwin"
+    },
+    {
+        "id": 11160,
+        "address": {
+            "street": "818 Vaughn Spurs",
+            "city": "Seattle",
+            "zip": "98198"
+        },
+        "assignedDate": "2021-01-09T18:30:50.674Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "In Review",
+        "applicantId": "431942437",
+        "applicant": "Clayton Heaney",
+        "financiallyResponsibleParty": "Irving Parker"
+    },
+    {
+        "id": 11161,
+        "address": {
+            "street": "4805 Eugenia Crescent",
+            "city": "Seattle",
+            "zip": "98122"
+        },
+        "assignedDate": "2020-02-25T04:26:10.227Z",
+        "closedDate": "2022-08-12T16:48:42.318Z",
+        "constructionType": "Street Use",
+        "status": "In Review",
+        "applicantId": "468182918",
+        "applicant": "Craig Beahan",
+        "financiallyResponsibleParty": "Randolph Shanahan"
+    },
+    {
+        "id": 11162,
+        "address": {
+            "street": "46132 Michelle Landing",
+            "city": "Seattle",
+            "zip": "44555"
+        },
+        "assignedDate": "2022-02-28T06:59:07.878Z",
+        "closedDate": null,
+        "constructionType": "Tenant Improvement",
+        "status": "In Correction",
+        "applicantId": "872447727",
+        "applicant": "Phillip Koepp",
+        "financiallyResponsibleParty": "Lynne Keeling"
+    },
+    {
+        "id": 11163,
+        "address": {
+            "street": "161 Grady Road",
+            "city": "Seattle",
+            "zip": "98102"
+        },
+        "assignedDate": "2020-02-06T13:59:49.292Z",
+        "closedDate": null,
+        "constructionType": "Street Use",
+        "status": "Issued",
+        "applicantId": "716746155",
+        "applicant": "Kara Veum",
+        "financiallyResponsibleParty": "Esther Monahan"
+    }
+]
