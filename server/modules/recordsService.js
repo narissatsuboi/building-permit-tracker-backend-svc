@@ -1,10 +1,10 @@
-import axios from 'axios';
-import * as fs from 'fs';
+require('dotenv').config({path: require('find-config')('.env')});
+const axios = require('axios');
+const fs = require('fs');
 
-const BASE_URL = 'https://data.nola.gov/resource/rcm3-fn58.json';
-const X_APP_TOKEN = 'g1akUYTinxtDHh4gfHYFRQjr8';
+const API_URL = process.env.NOLA_BASE_URL;
+const X_APP_TOKEN = process.env.X_APP_TOKEN;
 
-const URL = 'https://data.nola.gov/resource/rcm3-fn58.json?$limit=10';
 const PATH = 'records.json';
 
 async function getData() {
@@ -21,4 +21,4 @@ async function writeData(path, data) {
   })
 };
 
-getData().then(data => writeData(PATH, JSON.stringify(data)));
+// getData().then(data => writeData(PATH, JSON.stringify(data)));

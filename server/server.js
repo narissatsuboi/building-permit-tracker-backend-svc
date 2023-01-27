@@ -1,5 +1,6 @@
 // Loads the configuration from config.env to process.env
-require('dotenv').config({ path: './config.env' });
+require('dotenv').config({path: require('find-config')('.env')});
+
 
 const express = require('express');
 const cors = require('cors');
