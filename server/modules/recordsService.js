@@ -7,8 +7,8 @@ const X_APP_TOKEN = process.env.X_APP_TOKEN;
 
 const PATH = 'records.json';
 
-async function getData() {
-  const res = await axios.get(URL);
+async function getData(url) {
+  const res = await axios.get(url);
   return res.data;
 }
 
@@ -21,4 +21,14 @@ async function writeData(path, data) {
   })
 };
 
-// getData().then(data => writeData(PATH, JSON.stringify(data)));
+async function storeData(path, data) {
+  getData().then(data => writeData(path, JSON.stringify(data)));
+};
+
+// getData(API_URL).then((PATH, data) => storeData(PATH, data));
+
+module.exports = {
+  getData,
+  writeData,
+  storeData
+};
