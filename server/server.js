@@ -1,8 +1,11 @@
 // Loads the configuration from config.env to process.env
-require('dotenv').config({ path: './config.env' });
+require('dotenv').config({path: require('find-config')('.env')});
+
 
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 // get MongoDB driver connection
 // const dbo = require('./db/conn');
 
@@ -11,7 +14,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-// app.use(require('./routes/record'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended : false}));
+app.use(cookieParser());
+app.use(require('./routes/record'));
 
 // Global error handling
 app.use(function (err, _req, res) {
