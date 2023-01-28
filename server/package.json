@@ -8,6 +8,7 @@
     "start": "nodemon server.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
+    "test:single": "jest __tests__/recordsService.test.js",
     "lint": "eslint .",
     "format": "prettier --single-quote --check .",
     "prepare": "cd ../ && husky install server/.husky"

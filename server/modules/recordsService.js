@@ -7,28 +7,30 @@ const X_APP_TOKEN = process.env.X_APP_TOKEN;
 
 const PATH = 'records.json';
 
+// methods to GET and write static permit data to local JSON file
+// for use during early sprint design phases only 
+
 async function getData(url) {
-  const res = await axios.get(url);
-  return res.data;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
 }
 
 async function writeData(path, data) {
   fs.writeFile(path, data, (error) => {
     if (error) {
-      console.log(error);
-      return;
+      console.error(error.message);
     }
   })
 };
 
-async function storeData(path, data) {
-  getData().then(data => writeData(path, JSON.stringify(data)));
+async function refreshData() {
+  getData(API_URL).then(data => writeData(PATH, JSON.stringify(data)));
 };
 
-// getData(API_URL).then((PATH, data) => storeData(PATH, data));
-
 module.exports = {
-  getData,
-  writeData,
-  storeData
+ refreshData
 };
