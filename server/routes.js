@@ -1,9 +1,12 @@
-var express = require('express');
-var allRoutesRouter = express.Router();
 
-/* GET home page. */
-allRoutesRouter.get('/', function(req, res, next) {
-    res.send('welcome to tracki');
+const router = global.router;
+
+router.get('/home', (req, res, next) => {
+    res.send('<h3>Landing Page</h3>');
 });
 
-module.exports = allRoutesRouter;
+router.get('/about', (req, res, next) => {
+    res.send('<h3>About Page</h3>');
+});
+
+module.exports = router;
