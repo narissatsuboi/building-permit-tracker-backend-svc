@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(cookieParser());
-app.use(require('./routes/record'));
+app.use(require('./modules/records/recordsRoute'));
+
 
 // Global error handling
 app.use(function (err, _req, res) {
@@ -31,12 +32,6 @@ app.use(function (err, _req, res) {
 //     console.error(err);
 //     process.exit();
 //   }
-
-//   // start the Express server
-//   app.listen(PORT, () => {
-//     console.log(`Server is running on port: ${PORT}`);
-//   });
-// });
 
 // start the Express server
 app.listen(PORT, () => {
