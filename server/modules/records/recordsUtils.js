@@ -31,6 +31,8 @@ async function refreshData() {
   getData(API_URL).then(data => writeData(PATH, JSON.stringify(data)));
 };
 
+// refreshData();
+
 module.exports = {
  refreshData
 };
