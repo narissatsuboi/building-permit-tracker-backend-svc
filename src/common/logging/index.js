@@ -1,11 +1,30 @@
 const winston = require('winston');
 const expressWinston = require('express-winston');
+const path = require('path');
 
-const logger = winston.createLogger({
-    transports: [
-        new winston.transports.Console()
-    ]
-});
+const getTransports = () => {
+    const transports = [
+        new winston.transports.Console(),
+    ];
+    return transports;
+};
+
+const getFormat = () => winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple()
+);
+
+// set logger properties
+const loggerConfig = {
+    level: 'info', 
+    format: getFormat(),
+    transports: getTransports(),
+    exitOnError: true,
+    silent: false,
+};
+
+// init logger w/ config
+const logger = winston.createLogger(loggerConfig);
 
 module.exports = { 
     raw: logger,

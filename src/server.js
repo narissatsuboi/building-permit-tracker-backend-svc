@@ -4,7 +4,8 @@ const app = express();
 const path = require('path');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const logging = require(path.join(__dirname, 'common', 'logging', 'index.js'))
+const { LOGICAL_OPERATORS } = require('@babel/types');
+const logger = require(path.join(__dirname, 'common', 'logging', 'index.js'))
 
 const PORT = process.env.PORT || 5000;
 
@@ -26,5 +27,5 @@ app.use((err, req, res, next) => {
 });
 
 const server = app.listen(PORT, () => {
-    logging.info(`Server is running on port: ${PORT}`)
+    logger.info(`Server is running on port: ${PORT}`)
 }); 
