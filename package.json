@@ -1,25 +1,30 @@
 {
   "name": "tracki",
   "version": "1.0.0",
-  "description": "tracki dependencies",
-  "main": "app.js",
+  "description": "",
+  "main": "node src/server.js",
+  "type": "commonjs",
   "scripts": {
-    "dev": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:single": "jest __tests__/recordsService.test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/narissatsuboi/tracki.git"
-  },
-  "keywords": [
-    "mern",
-    "node",
-    "express"
-  ],
-  "author": "narissa tsuboi",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/narissatsuboi/tracki/issues"
+  "dependencies": {
+    "axios": "^1.2.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "find-config": "^1.0.0",
+    "mongodb": "^4.13.0"
   },
-  "homepage": "https://github.com/narissatsuboi/tracki#readme"
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.1",
+    "nodemon": "^2.0.20"
+  }
 }
