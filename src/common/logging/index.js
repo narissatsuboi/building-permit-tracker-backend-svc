@@ -10,23 +10,45 @@ const getTransports = () => {
 };
 
 const getFormat = () => winston.format.combine(
+    // winston.format.json(),
+    winston.format.simple(),
     winston.format.colorize(),
-    winston.format.simple()
 );
 
-// set logger properties
-const loggerConfig = {
+// logger
+const logger = winston.createLogger({
     level: 'info', 
     format: getFormat(),
     transports: getTransports(),
     exitOnError: true,
     silent: false,
-};
+});
 
-// init logger w/ config
-const logger = winston.createLogger(loggerConfig);
+// http logger
+const requestLogger = expressWinston.logger ({
+    format: getFormat(),
+    transports: getTransports(),
+    colorize: true,
+    expressFormat: true,
+    meta: true, 
+    requestWhitelist: ['method', 'url', 'query', 'statusCode'],
+    msg: '{{req.method}} {{req.url}} {{res.statusCode}}',
+});
+
+const errorLogger = expressWinston.errorLogger({
+    format: getFormat(),
+    transports: getTransports(),
+    colorize: true,
+    expressFormat: true,
+    meta: true, 
+    requestWhitelist: ['method', 'url', 'query', 'statusCode'],
+    msg: '{{err.message}} {{res.statusCode}} {{req.method}}',
+});
 
 module.exports = { 
+    requestLogger,
+    errorLogger,
+    logger,
     raw: logger,
     error: logger.error.bind(logger),
     warn: logger.warn.bind(logger),

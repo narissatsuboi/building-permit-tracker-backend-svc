@@ -4,22 +4,21 @@ const app = express();
 const path = require('path');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const { LOGICAL_OPERATORS } = require('@babel/types');
-const logger = require(path.join(__dirname, 'common', 'logging', 'index.js'))
+const { logger, requestLogger, errorLogger } = require(path.join(__dirname, 'common', 'logging', 'index.js'))
+
+app.use(cors());
+app.use(express.json());
+app.use(cookieParser());
+app.use(requestLogger);
+app.use(errorLogger);
 
 const PORT = process.env.PORT || 5000;
 
-// cross origin resource sharing
-app.use(cors());
-
-// built in middleware for json
-app.use(express.json());
-
-// middleware for cookies
-app.use(cookieParser());
-
 // routes
-app.use('/', require('./presentation/routes/root'));
+app.use('/', require(path.join(__dirname, 'presentation', 'routes', 'root')));
+// app.use('/records', require(path.join(__dirname, 'presentation', 'routes', 'records', 'records')));
+app.use('/records', require('./presentation/routes/records'));
+
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
