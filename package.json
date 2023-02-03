@@ -2,14 +2,13 @@
   "name": "tracki",
   "version": "1.0.0",
   "description": "",
-  "main": "node src/server.js",
+  "main": "node server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch",
-    "test:single": "jest __tests__/recordsService.test.js"
+    "start": "node server.js",
+    "dev": "nodemon --config ./configuration/nodemon.json server.js",
+    "test": "jest --config ./configuration/jest-config.js",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "MIT",
@@ -27,6 +26,7 @@
     "@types/jest": "^29.4.0",
     "jest": "^29.4.1",
     "nodemon": "^2.0.20",
+    "supertest": "^6.3.3",
     "winston": "^3.8.2"
   }
 }
