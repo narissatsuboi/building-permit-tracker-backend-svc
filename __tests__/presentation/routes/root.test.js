@@ -11,7 +11,7 @@ describe('test root routes', function () {
         expect(res.statusCode).toBe(200);
     })
     test('responds to /about', async () => {
-        const res = await request(app).get('/');
+        const res = await request(app).get('/about');
         expect(res.statusCode).toBe(200);
     })
 });
