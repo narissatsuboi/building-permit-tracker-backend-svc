@@ -6,6 +6,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const errorHandler = require(path.join(__dirname, 'presentation', 'middleware', 'errorHandler'));
 const { logger, requestLogger, errorLogger } = require(path.join(__dirname, 'common', 'logging', 'index.js'))
+const mongoose = require('mongoose');
 
 app.use(requestLogger);
 app.use(errorLogger);
