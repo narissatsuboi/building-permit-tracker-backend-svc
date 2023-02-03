@@ -26,6 +26,7 @@ app.use(cookieParser());
 
 // routes
 app.use('/', require(path.join(__dirname, 'presentation', 'routes', 'root')));
+app.use('/register', require(path.join(__dirname, 'presentation','routes','register')));
 app.use('/records', require(path.join(__dirname, 'presentation','routes','records')));
 
 // custom error handler middleware 
