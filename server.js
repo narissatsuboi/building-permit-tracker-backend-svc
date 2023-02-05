@@ -13,7 +13,7 @@ const { logger, requestLogger, errorLogger } = require(path.join(__dirname, 'com
 // db
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
-const connectDB = require(path.join(__dirname, 'configuration', 'dbConn'));
+const {connectDB} = require(path.join(__dirname, 'configuration', 'dbConn'));
 
 // connect to db 
 connectDB();
@@ -38,6 +38,6 @@ app.use(errorHandler);
 
 // if db connected, listen on server
 mongoose.connection.once('open', () => {
-    logger.info(`MongoDB running`);
+    console.log(`MongoDB running`);
     app.listen(PORT, () => logger.info(`Server is running on port: ${PORT}`))
 });
