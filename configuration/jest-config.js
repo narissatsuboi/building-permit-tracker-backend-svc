@@ -1,4 +1,5 @@
 module.exports = {
+    preset: "@shelf/jest-mongodb", 
     displayName: {
         name: "tracki",
         color: "inverse"
