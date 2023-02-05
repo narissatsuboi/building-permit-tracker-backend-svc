@@ -4,14 +4,14 @@ const DB_NAME = 'tracki';
 
 let MONGO_URL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${CLUSTER}.j7kdj7e.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 
-const connectDB = async () => {
+const connectDB = async (url) => {
     try {
-        await mongoose.connect(MONGO_URL, {
+        await mongoose.connect(url, {
             useUnifiedTopology: true,
             useNewUrlParser: true
         });
     } catch (err) {
-        console.log(err);
+        throw(err);
     }
 };
 module.exports = {
