@@ -2,8 +2,12 @@ const User = require('../../data/User.js');
 const bcrypt = require('bcrypt');
 
 const handleNewUser = async (req, res) => {
-    const { username, firstname, lastname, password } = req.body;
-    if (!username || !firstname || !lastname || !password) return res.status(400).json({ 'message': 'all fields required'});
+    // const { username, firstname, lastname, password } = req.body;
+    // if (!username || !firstname || !lastname || !password) return res.status(400).json({ 'message': 'all fields required'});
+    const username = req.body.username;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const password = req.body.password;
 
     // check for duplicate usernames in the db
     const duplicate = await User.findOne({ username: username }).exec();
