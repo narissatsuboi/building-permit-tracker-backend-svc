@@ -1,4 +1,5 @@
-const User = require('../../data/User.js');
+const path = require('path');
+const User = require(path.join('..', 'models', 'User'));
 const bcrypt = require('bcrypt');
 
 const handleNewUser = async (req, res) => {
