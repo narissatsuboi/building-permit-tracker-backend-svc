@@ -1,7 +1,8 @@
 const request = require('supertest');
 const express = require('express');
 const app = express();
-const router = '../../../presentation/routes/records';
+const path = require('path');
+const router = path.join('..', '..', 'routes', 'records');
 
 app.use('/', require(router));
 
