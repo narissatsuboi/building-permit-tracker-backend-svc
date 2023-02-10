@@ -41,7 +41,7 @@ app.use(errorHandler);
 
 // if db connected, listen on server
 mongoose.connection.once("open", () => {
-  logger.info(`Connected to MongoDB on default conn`);
+  logger.info(`Connected to MongoDB on default connection`);
   app.listen(PORT, () => logger.info(`Server is running on port: ${PORT}`));
 
   mongoose.connection.on("disconnect", (err) => {
