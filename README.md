@@ -12,9 +12,9 @@ Our motiviation for tracki came from working as construction professionals and u
 
 ## Who Is tracki for? 
 Anyone creating, tracking, or scheduling around a construction permit! 
- 🏗 ️architects, engineers, contractors
-💼 real estate developers 
-🏠 homeowners 
+- 🏗 ️architects, engineers, contractors
+- 💼 real estate developers 
+- 🏠 homeowners 
 
 ## Built With
 - React app hosted AWS EC2  
