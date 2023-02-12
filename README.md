@@ -10,7 +10,7 @@ Key features of tracki:
 
 Our motiviation for tracki came from working as construction professionals and using Excel to monitor 40+ permits a week. We spent 8+ hours a week searching each record one, navigating the government portal, and manually recording updates to report to stakeholders. 
 
-## Who Is tracki for? 
+## Who is tracki for? 
 Anyone creating, tracking, or scheduling around a construction permit! 
 - 🏗 ️architects, engineers, contractors
 - 💼 real estate developers 
