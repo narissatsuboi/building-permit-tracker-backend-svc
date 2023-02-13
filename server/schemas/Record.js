@@ -32,10 +32,10 @@ const recordSchema = new Schema({
     type: String,
   },
   filingdate: {
-    type: String,
+    type: Date,
   },
   issuedate: {
-    type: String,
+    type: Date,
   },
   currentstatus: {
     type: String,
@@ -45,7 +45,7 @@ const recordSchema = new Schema({
     type: String,
   },
   currentstatusdate: {
-    type: String,
+    type: Date,
   },
   landuse: {
     type: String,
