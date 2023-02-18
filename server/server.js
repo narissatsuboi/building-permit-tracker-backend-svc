@@ -1,50 +1,64 @@
 const dotenv = require("dotenv");
-dotenv.config({ path: require("find-config")(".env") });
-const PORT = process.env.PORT || 5000;
-const express = require("express");
-const app = express();
 const path = require("path");
+const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const errorHandler = require(path.join(
-  __dirname,
-  "middleware",
-  "errorHandler"
-));
-const { logger, requestLogger, errorLogger } = require(path.join(
-  __dirname,
-  "common",
-  "logging",
-  "index"
-));
-
-// db
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", true);
-const startDefaultConn = require(path.join(__dirname, "data", "defaultConn"));
-startDefaultConn(process.env.MONGO_URI);
 
-// register middleware
-app.use(requestLogger);
-app.use(errorLogger);
+const app = express();
+dotenv.config({ path: require("find-config")(".env") });
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// routes
-app.use("/", require(path.join(__dirname, "routes", "root")));
-app.use("/records", require(path.join(__dirname, "routes", "records")));
+const logger = require(path.join(__dirname, "common", "logging", "index"));
+const port = process.env.PORT || 5000;
+const trackiRoutes = path.join(__dirname, "routes", "root");
+const recordRoutes = path.join(__dirname, "routes", "records");
 
-// custom error handler middleware
-app.use(errorHandler);
+app.use("/", require(trackiRoutes));
+app.use("/records", require(recordRoutes));
 
-// if db connected, listen on server
-mongoose.connection.once("open", () => {
-  logger.info(`Connected to MongoDB on default conn`);
-  app.listen(PORT, () => logger.info(`Server is running on port: ${PORT}`));
-
-  mongoose.connection.on("disconnect", (err) => {
-    console.log(err);
+const connectdb = (uri) => {
+  mongoose.connect(uri, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
   });
-});
+};
+
+const startServer = (port=5000) => {
+  mongoose.connection.once("open", () => {
+    logger.info(`Connected to MongoDB on default conn`);
+    app.listen(port, () => logger.info(`Server is running on port: ${port}`));
+    mongoose.connection.on("disconnect", (err) => logger.error(err));
+  });
+};
+
+// const shutdown = async () => {
+//   process.on("SIGINT", async () => {
+//     await mongoose.connection.close();
+//     await app.close();
+//     process.exit(0);
+//   });
+// };
+
+const run = async (port=5000) => {
+  try {
+    connectdb(process.env.MONGO_URI);
+  } catch (err) {
+    logger.error("could not connect to db");
+  }
+  try {
+    startServer(port);
+  } catch (err) {
+    logger.error("could not run server");
+    mongoose.connection.close();
+  }
+};
+
+run();
+
+module.exports = app; 
