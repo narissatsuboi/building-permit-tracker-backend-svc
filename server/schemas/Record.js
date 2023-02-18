@@ -140,5 +140,5 @@ const recordSchema = new Schema({
 });
 
 const conn = mongoose.createConnection(process.env.MONGO_URI);
-const Record = conn.model("Record", recordSchema);
-module.exports = { Record, conn };
+const RecordModel = conn.model("Record", recordSchema);
+module.exports = { RecordModel, conn };
