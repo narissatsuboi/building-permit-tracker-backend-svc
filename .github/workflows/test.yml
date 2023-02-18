@@ -2,13 +2,15 @@ name: Unit Tests
 
 on: [pull_request]
 
+defaults:
+  run: 
+    working-directory: ./server
+
 jobs:
   tests:
+  
     runs-on: ubuntu-latest
-    defaults:
-      run: 
-        working-directory: ./server
-
+    
     strategy:
       matrix:
         node-version: [18.x]
