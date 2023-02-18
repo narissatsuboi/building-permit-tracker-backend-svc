@@ -5,8 +5,8 @@ const findAllRecords = async () => {
     return await RecordModel.find({}).lean();
 }
 
-const findRecordByPermitNumber = async (id) => {
-    return await RecordModel.find({ numstring : id }).lean();
+const findRecordByPermitNumber = async (permitNumber) => {
+    return await RecordModel.find({ numstring : permitNumber }).lean();
 }
 
 module.exports = {

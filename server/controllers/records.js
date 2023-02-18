@@ -1,4 +1,3 @@
-const { request } = require('express');
 const path = require('path');
 const RecordsService = require(path.join('..', 'services', 'records')); 
 
@@ -11,7 +10,7 @@ const getRecordsHandler = async (req, res) => {
 }
 
 const getRecordByPermitNumberHandler = async (req, res) => {
-    const permitNumber = req.params.numstring; 
+    const permitNumber = req.params.permitnumber; 
     const record = await RecordsService.findRecordByPermitNumber(permitNumber);
     if (record) {
         return res.send(record);
