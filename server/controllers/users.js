@@ -1,36 +1,42 @@
 const path = require('path');
-const User = require(path.join('..', 'models', 'User'));
-const bcrypt = require('bcrypt');
+const UsersService = require(path.join('..', 'services', 'users'));
 
-const handleNewUser = async (req, res) => {
-    // const { username, firstname, lastname, password } = req.body;
-    // if (!username || !firstname || !lastname || !password) return res.status(400).json({ 'message': 'all fields required'});
-    const username = req.body.username;
-    const firstname = req.body.firstname;
-    const lastname = req.body.lastname;
-    const password = req.body.password;
+const getAllUsersHandler = async (req, res) => {
+  const users = await UsersService.allUsers();
+  if (!users?.length) {
+    return res.status(400).json({'message': 'No users!'});
+  }
+  return res.send(users);
+};
 
-    // check for duplicate usernames in the db
-    const duplicate = await User.findOne({ username: username }).exec();
-    if (duplicate) return res.sendStatus(409); //Conflict 
+const createUserHandler = async (req, res) => {
+  // if (!req.username?.length || !req.password?.length) {
+  //   return res.status(400).json({"message": "Username and password required"})
+  // }
 
-    try {
-        //encrypt the password
-        const hashedPwd = await bcrypt.hash(password, 10);
+  const isDuplicate = await UsersService.userExists(req.username);
+  if (isDuplicate) {
+    return res.status(400).json({'message': 'User already exists'});
+  }
 
-        //create and store the new user
-        const result = await User.create({
-            "username": username,
-            "firstname": firstname,
-            "lastname": lastname,
-            "password": hashedPwd
-        });
+  const isCreated = await UsersService.createUser(req);
+  if (isCreated) {
+    return res.status(200).json({'message': 'User saved'});
+  }
 
+  return res.status(400).json({'message': 'Error creating user'});
+};
 
-        res.status(201).json({ 'success': `New user ${username} created!` });
-    } catch (err) {
-        res.status(500).json({ 'message': err.message });
-    }
-}
+const updateUserHandler = async (req, res) => {
+  return res.status(400);
+};
+const deleteUserHandler = async (req, res) => {
+  return res.status(400);
+};
 
-module.exports = { handleNewUser };
+module.exports = {
+  getAllUsersHandler,
+  createUserHandler,
+  updateUserHandler,
+  deleteUserHandler,
+};

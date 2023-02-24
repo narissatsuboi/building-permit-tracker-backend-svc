@@ -1,31 +1,22 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-  },
-  roles: {
-    User: {
-      type: Number,
-      default: 2001,
+const userSchema = new Schema(
+    {
+      username: {
+        type: String,
+        required: true,
+      },
+      password: {
+        type: String,
+        required: true,
+      },
     },
-    Admin: Number,
-  },
-  firstname: {
-    type: String,
-    required: true,
-  },
-  lastname: {
-    type: String,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  refreshToken: String,
-});
+    {
+      timestamps: true,
+    },
+);
 
-module.exports = mongoose.model("User", userSchema);
+const conn = mongoose.createConnection(process.env.MONGO_URI);
+const UserModel = mongoose.model('User', userSchema);
+module.exports = {UserModel, conn};
