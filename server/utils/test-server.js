@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const cookieParser = require("cookie-parser");
+const express = require('express');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 function createTestServer() {
   const app = express();
@@ -9,8 +9,9 @@ function createTestServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
-  app.use("/", require('../Root/rootRoutes'));
-  app.use("/records", require('../Record/recordRoutes'));
+  app.use('/', require('../Root/rootRoutes'));
+  app.use('/records', require('../Record/recordRoutes'));
+  app.use('/users', require('../User/userRoutes'));
 
   return app; 
 };

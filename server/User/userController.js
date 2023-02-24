@@ -5,7 +5,7 @@ const getAllUsersHandler = async (req, res) => {
   if (!users?.length) {
     return res.status(400).json({'message': 'No users!'});
   }
-  return res.send(users);
+  return res.status(200).send(users);
 };
 
 const createUserHandler = async (req, res) => {
