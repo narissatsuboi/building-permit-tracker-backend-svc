@@ -1,6 +1,4 @@
-const dotenv = require("dotenv");
-dotenv.config({ path: require("find-config")(".env") });
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recordSchema = new Schema({
@@ -140,5 +138,5 @@ const recordSchema = new Schema({
 });
 
 const conn = mongoose.createConnection(process.env.MONGO_URI);
-const RecordModel = conn.model("Record", recordSchema);
-module.exports = { RecordModel, conn };
+const RecordModel = conn.model('Record', recordSchema);
+module.exports = {RecordModel, conn};
