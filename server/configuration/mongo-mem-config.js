@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { MongoMemoryServer } = require("mongodb-memory-server");
+const mongoose = require('mongoose');
+const {MongoMemoryServer} = require('mongodb-memory-server');
 
 let mongoServer = undefined;
 
@@ -9,15 +9,15 @@ async function connectDB() {
 
   mongoose.connect(mongoUri);
 
-  mongoose.connection.on("error", (e) => {
-    if (e.message.code === "ETIMEDOUT") {
+  mongoose.connection.on('error', (e) => {
+    if (e.message.code === 'ETIMEDOUT') {
       console.log(e);
       mongoose.connect(mongoUri);
     }
     console.log(e);
   });
 
-  mongoose.connection.once("open", () => {
+  mongoose.connection.once('open', () => {
     console.log(`MongoDB successfully connected to ${mongoUri}`);
   });
 }
@@ -36,9 +36,9 @@ const dropCollections = async () => {
     if (collections) {
       for (const key in collections) {
         const collection = collections[key];
-        await collection.deleteMany(); 
+        await collection.deleteMany();
       }
-    } 
+    }
   }
 };
 

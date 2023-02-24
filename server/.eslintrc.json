@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": false,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "google"
+    ],
+    "ignorePatterns": [
+        "**/*.json",
+        "/__coverage__",
+        "/__mocks__",
+        "/__tests__",
+        "/node_modules"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+    }
+}

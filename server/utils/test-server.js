@@ -1,10 +1,7 @@
-const dotenv = require("dotenv");
-const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
-// dummy server for use in __tests__ 
 function createTestServer() {
   const app = express();
 
@@ -12,8 +9,8 @@ function createTestServer() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
-  app.use("/", require('../../routes/root'));
-  app.use("/records", require('../../routes/records'));
+  app.use("/", require('../Root/rootRoutes'));
+  app.use("/records", require('../Record/recordRoutes'));
 
   return app; 
 };
