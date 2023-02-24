@@ -9,9 +9,10 @@ const getAllUsersHandler = async (req, res) => {
 };
 
 const createUserHandler = async (req, res) => {
-  // if (!req.username?.length || !req.password?.length) {
-  //   return res.status(400).json({"message": "Username and password required"})
-  // }
+  const { username, password } = req.body
+    if (!username || !password) {
+    return res.status(400).json({"message": "Username and password required"})
+  }
 
   const isDuplicate = await UsersService.userExists(req.username);
   if (isDuplicate) {
