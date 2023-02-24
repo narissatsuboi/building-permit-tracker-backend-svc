@@ -1,6 +1,8 @@
+const dotenv = require('dotenv');
+dotenv.config({path: '../../.env'});
 const request = require('supertest');
-const { MongoMemoryServer } = require('mongodb-memory-server');
-const { createTestServer } = require('../../utils/test-server');
+const {MongoMemoryServer} = require('mongodb-memory-server');
+const {createTestServer} = require('../../utils/test-server');
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 

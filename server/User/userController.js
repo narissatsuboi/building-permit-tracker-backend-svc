@@ -2,7 +2,7 @@ const UsersService = require('./userService');
 
 const getAllUsersHandler = async (req, res) => {
   const users = await UsersService.allUsers();
-  if (!users?.length) {
+  if (!users) {
     return res.status(400).json({'message': 'No users!'});
   }
   return res.status(200).send(users);
@@ -21,7 +21,7 @@ const createUserHandler = async (req, res) => {
 
   const isCreated = await UsersService.createUser(req);
   if (isCreated) {
-    return res.status(200).json({'message': 'User saved'});
+    return res.status(200).json({'message': `User ${username} created`});
   }
 
   return res.status(400).json({'message': 'Error creating user'});
