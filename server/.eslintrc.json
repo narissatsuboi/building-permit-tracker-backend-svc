@@ -9,6 +9,7 @@
         "google"
     ],
     "ignorePatterns": [
+        "server.js",
         "**/*.json",
         "/__coverage__",
         "/__mocks__",
