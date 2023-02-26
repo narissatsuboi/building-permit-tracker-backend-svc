@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const {RecordModel, conn} = require('./RecordSchema');
 
 const findAllRecords = async () => {

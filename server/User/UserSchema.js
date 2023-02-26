@@ -1,3 +1,6 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: require("find-config")(".env") });
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

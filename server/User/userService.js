@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const path = require('path');
 const {UserModel, conn} = require('./UserSchema');
 const bcrypt = require('bcrypt');
@@ -30,8 +33,18 @@ const createUser = async (req) => {
   return false;
 };
 
+const deleteUser = async (usernameToDelete) => {
+  const filter = { username: usernameToDelete }; 
+  const promise = await UserModel.deleteOne(filter);
+  if (promise.deletedCount != 1) {
+    return false;
+  }
+  return true; 
+} 
+
 module.exports = {
   allUsers,
   userExists,
   createUser,
+  deleteUser,
 };

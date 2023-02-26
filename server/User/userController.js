@@ -1,7 +1,7 @@
-const UsersService = require('./userService');
+const UserService = require('./userService');
 
 const getAllUsersHandler = async (req, res) => {
-  const users = await UsersService.allUsers();
+  const users = await UserService.allUsers();
   if (!users) {
     return res.status(400).json({'message': 'No users!'});
   }
@@ -14,12 +14,12 @@ const createUserHandler = async (req, res) => {
     return res.status(400).json({"message": "Username and password required"})
   }
 
-  const isDuplicate = await UsersService.userExists(req.username);
+  const isDuplicate = await UserService.userExists(req.username);
   if (isDuplicate) {
     return res.status(400).json({'message': 'User already exists'});
   }
 
-  const isCreated = await UsersService.createUser(req);
+  const isCreated = await UserService.createUser(req);
   if (isCreated) {
     return res.status(200).json({'message': `User ${username} created`});
   }
@@ -31,7 +31,18 @@ const updateUserHandler = async (req, res) => {
   return res.status(400);
 };
 const deleteUserHandler = async (req, res) => {
-  return res.status(400);
+  const { username } = req.body; 
+
+  const userExists = await UserService.userExists(username); 
+  if (!userExists) {
+    return res.status(400).json({ message: 'User not found' });
+  }
+  
+  const wasDeleted = await UserService.deleteUser(username);
+  if (!wasDeleted) {
+    return res.status(400).json({ message: 'Error deleting user' });
+  }
+  return res.status(200).json({ message: 'User successfully deleted'});
 };
 
 module.exports = {
