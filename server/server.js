@@ -1,5 +1,5 @@
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require("dotenv");
+dotenv.config({ path: require("find-config")(".env") });
 
 const path = require('path');
 const express = require('express');
