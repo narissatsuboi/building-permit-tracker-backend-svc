@@ -10,11 +10,11 @@ const allUsers = async () => {
 };
 
 const userExists = async (username) => {
-  const duplicate = await UserModel.findOne({username})
+  const user = await UserModel.findOne({username})
       .collation({locale: 'en', strength: 2})
       .lean()
       .exec();
-  if (duplicate) {
+  if (user) {
     return true;
   }
   return false;
