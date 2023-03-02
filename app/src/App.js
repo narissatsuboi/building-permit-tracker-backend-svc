@@ -1,18 +1,13 @@
 import React from 'react'
 import { ThemeProvider } from 'theme-ui'
-import preset from '@rebass/preset'
+import { base as system } from '@theme-ui/presets'
+import Navbar from './comps/nav/Navbar'
 
-function App() {
-return (
-	<ThemeProvider theme={preset}>
-		<h1
-		  sx={{
-			color: 'primary',
-			fontFamily: 'heading',
-		  }}>
-		  Hello
-		</h1>
-	  </ThemeProvider>
-	)
+function App () {
+  return (
+    <ThemeProvider theme={system}>
+      <Navbar></Navbar>
+    </ThemeProvider>
+  )
 }
-export default App; 
+export default App
