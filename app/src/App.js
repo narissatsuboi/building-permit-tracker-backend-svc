@@ -1,13 +1,14 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
 import { ThemeProvider } from 'theme-ui'
-import { base as system } from '@theme-ui/presets'
-import Navbar from './comps/nav/Navbar'
-
+import { base } from '@theme-ui/presets'
+import router from './router'
 function App () {
   return (
-    <ThemeProvider theme={system}>
-      <Navbar></Navbar>
+    <ThemeProvider theme={base}>
+		<RouterProvider router={router} />
     </ThemeProvider>
   )
 }
+
 export default App
