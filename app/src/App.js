@@ -1,57 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react'
+import { ThemeProvider } from 'theme-ui'
+import preset from '@rebass/preset'
 
 function App() {
 return (
-	<div className="App">
-	<header className="App-header">
-		<img src={logo} className="App-logo"
-			alt="logo" />
-		
-<p>A simple React app.....</p>
-
-		<a
-		className="App-link"
-		href="https://reactjs.org"
-		target="_blank"
-		rel="noopener noreferrer"
-		>
-		Learn React
-		</a>
-		<form action="../../post" method="post"
-			className="form">
-		<button type="submit">Connected?</button>
-		</form>
-	</header>
-	</div>
-);
+	<ThemeProvider theme={preset}>
+		<h1
+		  sx={{
+			color: 'primary',
+			fontFamily: 'heading',
+		  }}>
+		  Hello
+		</h1>
+	  </ThemeProvider>
+	)
 }
-
-export default App;
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
+export default App; 
