@@ -14,6 +14,10 @@ const router = createBrowserRouter(
             <Route path='about' element={<h1>about tracki</h1>}/>
             <Route path='faq' element={<h1> faq </h1>}/>
             <Route path='contact' element={<h1>contact us</h1>}/>
+
+                <Route path='records' element={<h1>records</h1>}>
+                    <Route path='records/:permitnumber' element={<h1>single permit card</h1>}/>
+                </Route>
         </Route>
     )
 )
