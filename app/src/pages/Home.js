@@ -7,7 +7,7 @@ export default function Home() {
 
     return(
         <div>
-            <Text>home.js page</Text>
+            <Text color='accentblue'>home.js page</Text>
         </div>
     )
 }
