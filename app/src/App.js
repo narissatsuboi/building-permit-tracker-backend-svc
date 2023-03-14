@@ -6,7 +6,9 @@ import {
   Outlet
 } from 'react-router-dom'
 import { ThemeProvider } from 'theme-ui'
-import { base } from '@theme-ui/presets'
+import { theme } from './theme/theme'
+
+// import { base } from '@theme-ui/presets'
 
 // pages
 import Home from './pages/Home'
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
 
 function App () {
   return (
-    <ThemeProvider theme={base}>
+    <ThemeProvider theme={ theme }>
       <RouterProvider router={router} />
     </ThemeProvider>
   )

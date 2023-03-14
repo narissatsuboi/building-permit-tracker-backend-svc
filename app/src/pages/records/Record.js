@@ -1,6 +1,8 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom"
-import { Flex, Text, Box, Link } from "rebass"
+// import { Flex, Text, Box, Link } from "rebass"
+import { Box, Label, Input, Button } from 'theme-ui'
+
 import axios from 'axios'
 
 export default function Record() {
@@ -8,10 +10,16 @@ export default function Record() {
     return (
         <div>
           {records.data.map(record => (
-            <Text key={record.numstring}>
-            <p>{record.address}</p>
-            <p>{record.numstring}</p>
-            </Text>
+            <Box 
+                p={5}
+                width={[ 1, 1, 1/2 ]}
+                // color='black'
+                bg='pink'
+                key={record.numstring}
+            >
+                {record.address}
+                {record.numstring}
+            </Box>
           ))}
         </div>
       )
