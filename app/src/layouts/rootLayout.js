@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 
@@ -21,9 +22,8 @@ const RootLayout = () => {
           flex: '1 1 auto'
         }}
       >
-        Landing Page
       </main>
-      
+      <Outlet></Outlet>
       <Footer></Footer>
     </div>
   )
