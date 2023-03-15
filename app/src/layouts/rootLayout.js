@@ -1,47 +1,7 @@
-import { Outlet, NavLink, ScrollRestoration } from 'react-router-dom'
-import Navbar from '../components/nav/Navbar'
+import Navbar from '../components/layout/Navbar'
+import Footer from '../components/layout/Footer'
+
 /** @jsxImportSource theme-ui */
-// const RootLayout = (props) => {
-//   return (
-//     <div
-//       sx={{
-//         display: 'flex',
-//         flexDirection: 'column',
-//         // set this to `minHeight: '100vh'` for full viewport height
-//         // minHeight: 256
-//         minHeight: '100vh'
-
-//       }}
-//     >
-//       <header
-//         sx={{
-//           width: '100%'
-//         }}
-//       >
-//         Header
-//         {/* <Navbar></Navbar> */}
-//       </header>
-//       <main
-//         sx={{
-//           width: '100%',
-//           flex: '1 1 auto'
-//         }}
-//       >
-//         {props.children}
-//       </main>
-//       <Outlet />
-//       <footer
-//         sx={{
-//           width: '100%'
-//         }}
-//       >
-//         Footer
-//       </footer>
-//       <ScrollRestoration />
-//     </div>
-//   )
-// }
-
 const RootLayout = () => {
   return (
     <div
@@ -53,28 +13,18 @@ const RootLayout = () => {
         minHeight: '100vh'
       }}
     >
-      <header
-        sx={{
-          width: '100%'
-        }}
-      >
-        Header
-      </header>
+      <Navbar></Navbar>
       <main
         sx={{
+          pl: 5,
           width: '100%',
           flex: '1 1 auto'
         }}
       >
-        Main
+        Landing Page
       </main>
-      <footer
-        sx={{
-          width: '100%',
-        }}
-      >
-        Footer
-      </footer>
+      
+      <Footer></Footer>
     </div>
   )
 }
