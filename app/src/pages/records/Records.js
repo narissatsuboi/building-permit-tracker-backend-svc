@@ -27,35 +27,21 @@ import axios from 'axios'
 //   )
 // }
 
-export default function Record () {
-    let records = useLoaderData()
-    return (
-      <div>
-        {records.data.map(record => (
-            <Card 
-                sx ={{
-                    maxWidth: 256,
-                    height: 256,
-                    border: 'solid',
-                    borderRadius: 5,
-                }}>
-                <Grid 
-                    key={record.numstring}
-                    sx={{
-                        gap: 2, 
-                        columns: 1,
-                    }}> 
-                    <Box>{record.numstring}</Box>
-                    <Box>{record.address}</Box>
-                    <Box>{record.currentstatus}</Box>
-                    <Box>{record.nextstatus}</Box>
-                </Grid>
-            </Card>
-
-        ))}
-      </div>
-    )
-  }
+export default function Records () {
+  let records = useLoaderData()
+  return (
+    <div>
+      {records.data.map(record => (
+          <div key={record._id}>
+            <Box>{record.numstring}</Box>
+            <Box>{record.address}</Box>
+            <Box>{record.currentstatus}</Box>
+            <Box>{record.nextstatus}</Box>
+          </div>
+      ))}
+    </div>
+  )
+}
 
 export const loader = async () => {
   try {

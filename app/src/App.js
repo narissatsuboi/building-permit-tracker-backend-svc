@@ -7,7 +7,7 @@ import { bootstrap } from '@theme-ui/presets'
 
 // pages
 import Home from './pages/Home'
-import Record, { loader as recordLoader } from './pages/records/Record'
+import Records, { loader as recordLoader } from './pages/records/Records'
 
 // layouts
 import RootLayout from './layouts/rootLayout'
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Record />,
+            element: <Records />,
             loader: recordLoader,
           },
         ]
