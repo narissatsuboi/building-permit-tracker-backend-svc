@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 
 export default function PermitTile({props}) {
   return (
-    <Card key={props._id} sx={{ minWidth: 275, maxWidth: 275, m: 3,}}>
+    <Card key={props._id} sx={{ maxWidth: 275, height: 275, m: 2,}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {props.address}
