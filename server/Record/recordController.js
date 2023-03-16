@@ -15,7 +15,15 @@ const getRecordByPermitNumberHandler = async (req, res) => {
   }
 };
 
+const getDevRecordsHandler = async (req, res) => {
+  const records = await RecordsService.findDevRecords();
+  if (records) {
+    res.json({ data : records }); 
+  }
+};
+
 module.exports = {
   getRecordsHandler,
   getRecordByPermitNumberHandler,
+  getDevRecordsHandler,
 };
