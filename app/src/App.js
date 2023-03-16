@@ -4,8 +4,8 @@ import {
 } from 'react-router-dom'
 
 // pages
-import Home from './pages/Home'
-import Records, { loader as recordLoader } from './pages/records/Records'
+import Home from './pages/LandingPage'
+import Records, { loader as recordLoader } from './pages/records/RecordsPage'
 
 // layouts
 import RootLayout from './layouts/rootLayout'
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/records',
+        path: '/records/dev',
         // element: <RootLayout />,
         children: [
           {
@@ -37,10 +37,7 @@ const router = createBrowserRouter([
 
 function App () {
   return (
-    // <ThemeProvider theme={ bootstrap }>
-    //   <RouterProvider router={router} />
-    // </ThemeProvider>
-    
+
     <RouterProvider router={router} />
 
   )
