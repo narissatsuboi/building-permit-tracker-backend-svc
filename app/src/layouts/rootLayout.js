@@ -1,32 +1,32 @@
+import * as React from 'react'
+import { Outlet } from 'react-router-dom'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
+import CssBaseline from '@mui/material/CssBaseline'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
+import theme from '../themes/theme'
 
-/** @jsxImportSource theme-ui */
 const RootLayout = () => {
   return (
-    <div
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        // set this to `minHeight: '100vh'` for full viewport height
-        // minHeight: 256,
-        minHeight: '100vh'
-      }}
-    >
-      <Navbar></Navbar>
-      <main
-        sx={{
-          pl: 5,
-          width: '100%',
-          flex: '1 1 auto'
-        }}
-      >
-        Landing Page
-      </main>
-      
-      <Footer></Footer>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth={false} disableGutters>
+        <Navbar></Navbar>
+        <main>
+          <Outlet></Outlet>
+        </main>
+      </Container>
+    </ThemeProvider>
   )
 }
 
 export default RootLayout
+
+{
+  /* <div>
+<Outlet></Outlet>
+<Footer></Footer>
+</div> */
+}
