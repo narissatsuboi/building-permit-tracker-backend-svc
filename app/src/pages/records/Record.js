@@ -7,16 +7,24 @@ import axios from 'axios'
 
 export default function Records () {
   let records = useLoaderData()
-    return (
+  // return (
+  //   <div>
+  //     {records.data.map(record => (
+  //       <div key={record._id}>
+  //         {record.numstring}
+  //         {record.address}
+  //         {record.currentstatus}
+  //         {record.nextstatus}
+  //       </div>
+  //     ))}
+  //   </div>
+  // )
+
+  return (
     <div>
-      {records.data.map(record => (
-        <div>
-          <PermitTile key={record._id} props={record}></PermitTile>
-        </div>
-      ))}
+    <Tile></Tile>
     </div>
   )
-
 }
 
 export const loader = async () => {

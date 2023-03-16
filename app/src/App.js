@@ -3,9 +3,6 @@ import {
   createBrowserRouter,
 } from 'react-router-dom'
 
-// import { ThemeProvider } from 'theme-ui'
-// import { bootstrap } from '@theme-ui/presets'
-
 // pages
 import Home from './pages/Home'
 import Records, { loader as recordLoader } from './pages/records/Records'

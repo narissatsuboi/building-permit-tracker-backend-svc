@@ -6,8 +6,7 @@ import Footer from '../components/layout/Footer'
 import CssBaseline from '@mui/material/CssBaseline'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
-
-const theme = createTheme()
+import theme from '../themes/theme'
 
 const RootLayout = () => {
   return (
@@ -15,9 +14,9 @@ const RootLayout = () => {
       <CssBaseline />
       <Container maxWidth={false} disableGutters>
         <Navbar></Navbar>
-        {/* <main>
+        <main>
           <Outlet></Outlet>
-        </main> */}
+        </main>
       </Container>
     </ThemeProvider>
   )
