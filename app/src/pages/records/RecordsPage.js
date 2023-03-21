@@ -5,20 +5,13 @@ import Box from '@mui/material/Box'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Grid from '@mui/material/Unstable_Grid2'
-import PermitTile from '../../components/PermitTile'
+import PermitCard from '../../components/PermitCard'
+import PermitGrid from '../../components/PermitGrid'
 
 export default function Records () {
-  let records = useLoaderData()
+  let recs = useLoaderData()
 return (
-  <ImageList cols={4}>
-    {records.data.map(record => (
-      <div>
-        <Grid xs={4}>
-          <PermitTile key={record._id} props={record}></PermitTile>
-        </Grid>
-      </div>
-    ))}
-  </ImageList>
+  <PermitGrid records={recs}></PermitGrid>
   )
 }
 
