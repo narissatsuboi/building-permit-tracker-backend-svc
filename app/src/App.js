@@ -1,7 +1,7 @@
-import {
-  RouterProvider,
-  createBrowserRouter,
-} from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
+import theme from './themes/theme'
+import { ThemeProvider } from '@mui/material/styles'
 
 // pages
 import Home from './pages/LandingPage'
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Records />,
-            loader: recordLoader,
-          },
+            loader: recordLoader
+          }
         ]
       }
     ]
@@ -37,9 +37,9 @@ const router = createBrowserRouter([
 
 function App () {
   return (
-
-    <RouterProvider router={router} />
-
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   )
 }
 
