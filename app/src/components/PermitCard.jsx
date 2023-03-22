@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Box, Button, Paper, Typography,  } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import StatusBadge from './StatusBadge.jsx'
 
 const CustomCard = styled(Paper)(({ theme }) => ({
   display: 'flex',
