@@ -4,11 +4,16 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles'
 
+const CustomCard = styled(Card)(({ theme }) => ({
+  minWidth: 225,
+  minHeight: 275,
+}));
 
 export default function PermitTile({props}) {
   return (
-    <Card key={props._id} sx={{ maxWidth: 275, height: 275, m: 2,}}>
+    <CustomCard key={props._id}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {props.address}
@@ -26,6 +31,6 @@ export default function PermitTile({props}) {
       <CardActions>
         <Button size="small">Learn More</Button>
       </CardActions>
-    </Card>
+    </CustomCard>
   );
 }
