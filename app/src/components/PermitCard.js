@@ -1,37 +1,56 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import * as React from 'react'
+import { Box, Button, Paper, Typography,  } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
-const CustomCard = styled(Card)(({ theme }) => ({
+const CustomCard = styled(Paper)(({ theme }) => ({
+  display: 'flex',
+  flex: 1,
+  flexDirection: 'column',
+  alignItems: 'flex-start',
   minWidth: 225,
   maxWidth: 225,
   minHeight: 225,
   maxHeight: 225,
   boxShadow: theme.shadows[2]
-}));
+}))
 
-export default function PermitTile({props}) {
+export default function PermitTile ({ props }) {
   return (
-    <CustomCard 
-    key={props._id}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+    <CustomCard key={props._id}>
+      <Box
+        sx={{
+          display: 'flex',
+          flex: 1,
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          pt: 4,
+          px: 2
+        }}
+      >
+        <Typography sx={{ fontSize: 14 }} color='text.secondary' gutterBottom>
           {props.address}
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography variant='h5' component='div'>
           {props.numstring}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Building Permit
+        <Typography sx={{ mb: 1.5 }} color='text.secondary'>
+          {props.type}
         </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+        <Box
+          sx={{
+            display: 'flex',
+            width: '100%',
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
+            pb: 2
+          }}
+        >
+          <Button size='small'>Status</Button>
+          <Button size='small'>Learn More</Button>
+        </Box>
+      </Box>
     </CustomCard>
-  );
+  )
 }
