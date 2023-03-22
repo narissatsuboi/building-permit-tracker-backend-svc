@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router-dom'
 import Tile from '../../components/Tile'
 import PermitTile from '../../components/PermitTile'
 import axios from 'axios'
+import PermitGrid from '../../components/PermitGrid'
 
 export default function Records () {
   let records = useLoaderData()

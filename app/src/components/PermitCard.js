@@ -8,12 +8,16 @@ import { styled } from '@mui/material/styles'
 
 const CustomCard = styled(Card)(({ theme }) => ({
   minWidth: 225,
-  minHeight: 275,
+  maxWidth: 225,
+  minHeight: 225,
+  maxHeight: 225,
+  boxShadow: theme.shadows[2]
 }));
 
 export default function PermitTile({props}) {
   return (
-    <CustomCard key={props._id}>
+    <CustomCard 
+    key={props._id}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {props.address}
@@ -23,9 +27,6 @@ export default function PermitTile({props}) {
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
           Building Permit
-        </Typography>
-        <Typography variant="body2">
-          {props.description}
         </Typography>
       </CardContent>
       <CardActions>

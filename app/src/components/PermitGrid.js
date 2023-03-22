@@ -4,14 +4,18 @@ import Grid from '@mui/material/Unstable_Grid2'
 
 export default function PermitGrid ({ records }) {
   return (
-    <Grid container>
-      {
-        records.data.map(record => (
-          <Grid key={record._id} item xs={12} sm={6} md={3}>
-            <PermitCard props={record}></PermitCard>
-          </Grid>
-        ))
-      }
+    <Grid
+      container
+      spacing={{ xs: 2, md: 3 }}
+      columns={{ xs: 4, sm: 8, md: 12 }}
+      justifyContent='center'
+      marginTop={3}
+    >
+      {records.data.map(record => (
+        <Grid item key={record._id}>
+          <PermitCard props={record}></PermitCard>
+        </Grid>
+      ))}
     </Grid>
   )
 }

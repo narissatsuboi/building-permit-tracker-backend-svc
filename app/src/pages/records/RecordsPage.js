@@ -2,11 +2,12 @@ import * as React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import axios from 'axios'
 import PermitGrid from '../../components/PermitGrid'
+import { Box } from '@mui/material'
 
 export default function Records () {
   let recs = useLoaderData()
 return (
-  <PermitGrid records={recs}></PermitGrid>
+    <PermitGrid records={recs}></PermitGrid>
   )
 }
 
