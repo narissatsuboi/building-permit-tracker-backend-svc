@@ -1,11 +1,6 @@
 import * as React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import axios from 'axios'
-import Box from '@mui/material/Box'
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Grid from '@mui/material/Unstable_Grid2'
-import PermitCard from '../../components/PermitCard'
 import PermitGrid from '../../components/PermitGrid'
 
 export default function Records () {
