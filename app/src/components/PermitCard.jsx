@@ -22,7 +22,7 @@ const StatusBand = styled(Box)(({ theme }) => ({
   alignItems: 'flex-end',
   justifyContent: 'space-between',
   paddingBottom: theme.spacing(3),
-  backgroundColor: 'pink'
+  backgroundColor: theme.palette.status.grey
 }))
 
 export default function PermitTile ({ props }) {

@@ -8,6 +8,13 @@ const theme = createTheme({
         secondary: {
             main: '#CED4DA',
         },
+        status: {
+            green: '#43AA8B',
+            orange: '#F8961E',
+            yellow: '#F9C74F',
+            red: '#F94144',
+            grey: '#adb5bd',
+        }
 
     },
 })
