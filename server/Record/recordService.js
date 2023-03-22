@@ -16,6 +16,15 @@ const findRecordByPermitNumber = async (permitNumber) => {
   return await RecordModel.find({numstring: permitNumber}).lean();
 };
 
+const findDistinctStatuses = async() => {
+  return await RecordModel.distinct('currentstatus').exec(); 
+}
+
+// (async () => {
+//   const res = await findDistinctStatuses(); 
+//   console.log(res);
+// })()
+
 module.exports = {
   findAllRecords,
   findRecordByPermitNumber,
