@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Box, Button, Paper, Typography,  } from '@mui/material'
 import { styled } from '@mui/material/styles'
+import StatusBadge from './StatusBadge.jsx'
 
 const CustomCard = styled(Paper)(({ theme }) => ({
   display: 'flex',
@@ -12,6 +13,17 @@ const CustomCard = styled(Paper)(({ theme }) => ({
   minHeight: 225,
   maxHeight: 225,
   boxShadow: theme.shadows[2]
+}))
+
+const StatusBand = styled(Box)(({ theme }) => ({
+  // display: 'flex',
+  width: '100%',
+  height: '50%',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  paddingBottom: theme.spacing(3),
+  backgroundColor: 'pink'
 }))
 
 export default function PermitTile ({ props }) {
@@ -36,21 +48,8 @@ export default function PermitTile ({ props }) {
         <Typography sx={{ mb: 1.5 }} color='text.secondary'>
           {props.type}
         </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            width: '100%',
-            flex: 1,
-            flexDirection: 'row',
-            alignItems: 'flex-end',
-            justifyContent: 'space-between',
-            pb: 2
-          }}
-        >
-          <Button size='small'>Status</Button>
-          <Button size='small'>Learn More</Button>
-        </Box>
       </Box>
+        <StatusBand></StatusBand>
     </CustomCard>
   )
 }
