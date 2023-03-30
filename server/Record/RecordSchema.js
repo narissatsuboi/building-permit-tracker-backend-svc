@@ -2,6 +2,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: require("find-config")(".env") });
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const { assignStatusCategory } = require('./recordService')
 
 const recordSchema = new Schema({
   address: {
@@ -137,6 +138,12 @@ const recordSchema = new Schema({
     type: Date,
     default: () => Date.now(),
   },
+  // statusCategory: {
+  //   type: String,
+  //   default: "na",
+  //   // set: () => assignStatusCategory(this.currentstatus),
+  // }
+
 });
 
 const conn = mongoose.createConnection(process.env.MONGO_URI);
