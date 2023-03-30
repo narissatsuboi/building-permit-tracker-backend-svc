@@ -14,7 +14,51 @@ const CustomCard = styled(Paper)(({ theme }) => ({
   boxShadow: theme.shadows[2]
 }))
 
-const StatusBand = styled(Box)(({ theme }) => ({
+const GreenStatusBand = styled(Box)(({ theme }) => ({
+  // display: 'flex',
+  width: '100%',
+  height: '50%',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  paddingBottom: theme.spacing(3),
+  backgroundColor: theme.palette.status.green
+}))
+
+const OrangeStatusBand = styled(Box)(({ theme }) => ({
+  // display: 'flex',
+  width: '100%',
+  height: '50%',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  paddingBottom: theme.spacing(3),
+  backgroundColor: theme.palette.status.orange
+}))
+
+const YellowStatusBand = styled(Box)(({ theme }) => ({
+  // display: 'flex',
+  width: '100%',
+  height: '50%',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  paddingBottom: theme.spacing(3),
+  backgroundColor: theme.palette.status.yellow
+}))
+
+const RedStatusBand = styled(Box)(({ theme }) => ({
+  // display: 'flex',
+  width: '100%',
+  height: '50%',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  paddingBottom: theme.spacing(3),
+  backgroundColor: theme.palette.status.red
+}))
+
+const GreyStatusBand = styled(Box)(({ theme }) => ({
   // display: 'flex',
   width: '100%',
   height: '50%',
@@ -24,6 +68,21 @@ const StatusBand = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(3),
   backgroundColor: theme.palette.status.grey
 }))
+
+const statusBands = {
+  'Meter Release': GreenStatusBand,
+  'Certificate of Completion': GreenStatusBand,
+  'Permit Issued': OrangeStatusBand,
+  'Default': GreyStatusBand
+}
+
+const getStatusBand = (status) => {
+  let StatusBand = statusBands['Default']
+  if (status === 'Meter Release' || status === 'Permit Issued') {
+    StatusBand = statusBands[status]
+  }
+  return <StatusBand />
+}
 
 export default function PermitTile ({ props }) {
   return (
@@ -48,7 +107,7 @@ export default function PermitTile ({ props }) {
           {props.type}
         </Typography>
       </Box>
-        <StatusBand></StatusBand>
+        {getStatusBand(props.currentstatus)}
     </CustomCard>
   )
 }
