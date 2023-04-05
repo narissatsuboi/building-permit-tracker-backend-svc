@@ -1,5 +1,5 @@
 ![banner](https://i.imgur.com/GAX2b1I.png)
-[![license](https://img.shields.io/github/license/dec0dOS/amazing-github-template.svg?style=flat-square)](LICENSE) [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)  ![contributors](https://img.shields.io/github/contributors/narissatsuboi/tracki) ![commitactivity](https://img.shields.io/github/commit-activity/m/narissatsuboi/tracki)  ![size](https://img.shields.io/github/repo-size/narissatsuboi/tracki) ![website](https://img.shields.io/website?down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Ftracki.gg)
+[![license](https://img.shields.io/github/license/dec0dOS/amazing-github-template.svg?style=flat-square)](LICENSE) ![contributors](https://img.shields.io/github/contributors/narissatsuboi/tracki) ![commitactivity](https://img.shields.io/github/commit-activity/m/narissatsuboi/tracki)  ![size](https://img.shields.io/github/repo-size/narissatsuboi/tracki) ![website](https://img.shields.io/website?down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Ftracki.gg)
 
 ## _tracki keeps tabs on your permits, so you don't have to_
 tracki is a live dashboard for city building permits in review 📋
