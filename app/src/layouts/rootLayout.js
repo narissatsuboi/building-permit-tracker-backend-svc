@@ -10,15 +10,15 @@ import theme from '../themes/theme'
 
 const RootLayout = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    // <ThemeProvider theme={theme}>
+      // <CssBaseline />
       <Container maxWidth={false} disableGutters>
         <Navbar></Navbar>
         <main>
           <Outlet></Outlet>
         </main>
       </Container>
-    </ThemeProvider>
+    // </ThemeProvider>
   )
 }
 

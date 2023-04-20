@@ -16,21 +16,21 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: '/records/dev',
-        // element: <RootLayout />,
-        children: [
-          {
-            index: true,
-            element: <Records />,
-            loader: recordLoader
-          }
-        ]
-      }
+      // {
+      //   index: true,
+      //   element: <Home />
+      // },
+      // {
+      //   path: '/records/dev',
+      //   // element: <RootLayout />,
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <Records />,
+      //       loader: recordLoader
+      //     }
+      //   ]
+      // }
     ]
   }
 ])
