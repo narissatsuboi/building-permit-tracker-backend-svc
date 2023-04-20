@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles'
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#035a9d',
+            main: '#ffffff',
         },
         secondary: {
             main: '#CED4DA',
@@ -18,6 +18,12 @@ const theme = createTheme({
         }
 
     },
+    typography: {
+        fontFamily: [
+            'Inter',
+            'sans-serif',
+        ].join(','),
+    }
 })
 
 export default theme
