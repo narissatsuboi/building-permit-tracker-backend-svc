@@ -6,7 +6,7 @@ import { ThemeProvider } from '@mui/material/styles'
 
 // pages
 import ErrorPage from './pages/ErrorPage.jsx'
-import Home from './pages/LandingPage'
+import Index from './pages/LandingPage'
 import Records, { loader as recordLoader } from './pages/records/RecordsPage'
 
 // layouts
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Index />
       },
       {
         path: '/records/dev',
