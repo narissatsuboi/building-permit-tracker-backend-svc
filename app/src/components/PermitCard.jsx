@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Box, Button, Paper, Typography,  } from '@mui/material'
 import { styled } from '@mui/material/styles'
+import { colorstatusMap } from './statuscolor'
 
 const CustomCard = styled(Paper)(({ theme }) => ({
   display: 'flex',
@@ -67,6 +68,17 @@ const GreyStatusBand = styled(Box)(({ theme }) => ({
   justifyContent: 'space-between',
   paddingBottom: theme.spacing(3),
   backgroundColor: theme.palette.status.grey
+}))
+
+const BasicStatusBand = styled(Box)(({ theme, status }) => ({
+  // display: 'flex',
+  width: '100%',
+  height: '50%',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'space-between',
+  paddingBottom: theme.spacing(3),
+  backgroundColor: theme.palette.status.grey 
 }))
 
 const statusBands = {

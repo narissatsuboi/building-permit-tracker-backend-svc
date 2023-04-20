@@ -9,6 +9,7 @@ const theme = createTheme({
             main: '#CED4DA',
         },
         status: {
+            blue: 'blue',
             green: '#43AA8B',
             orange: '#F8961E',
             yellow: '#F9C74F',
