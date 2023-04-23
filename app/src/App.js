@@ -1,10 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline'
 
-// react bootstrap
-import * as ReactBootstrap from 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import theme from './themes/theme'
 import { ThemeProvider } from '@mui/material/styles'
 

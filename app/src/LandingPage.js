@@ -9,9 +9,9 @@ import ExcavatorBanner from './components/index/ExcavatorBanner.jsx'
 export default function LandingPage() {
 
     return(
-        <Box disableGutters>
+        <div >
             <ExcavatorBanner></ExcavatorBanner>
-       </Box>
+       </div>
    )
 }
 
