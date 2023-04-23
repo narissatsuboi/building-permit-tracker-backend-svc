@@ -5,8 +5,7 @@ import Container from '@mui/material/Container'
 
 export default function RootLayout() {
   return (
-      <Container maxWidth={true} disableGutters>
-      {/* <Container maxWidth={false} disableGutters sx={{pl: 4, pr: 4}}> */}
+      <Container disableGutters>
         <Navbar></Navbar>
         <main>
           <Outlet></Outlet>
