@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Billboard from '../components/index/Billboard.jsx'
 import Grid from '@mui/material/Unstable_Grid2'
-import { Container, Box } from '@mui/material'
+import { Container, Box, Typography } from '@mui/material'
 import { Card } from '@mui/material'
 import { Image } from 'mui-image'
+import LandingStrip from '../components/index/LandingStrip.jsx'
 
 export default function Home() {
 
@@ -33,9 +34,7 @@ export default function Home() {
                     </Grid>
                 </Grid>
             </Container> */}
-            <Box disableGutters >
-                <Image src={require('../assets/excavator.jpg')}/>
-            </Box>
+            <LandingStrip></LandingStrip>
        </Box>
    )
 }
