@@ -1,12 +1,16 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline'
 
+// react bootstrap
+import * as ReactBootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import theme from './themes/theme'
 import { ThemeProvider } from '@mui/material/styles'
 
 // pages
 import ErrorPage from './pages/ErrorPage.jsx'
-import Index from './pages/LandingPage'
+import Index from './LandingPage'
 import Records, { loader as recordLoader } from './pages/records/RecordsPage'
 
 // layouts

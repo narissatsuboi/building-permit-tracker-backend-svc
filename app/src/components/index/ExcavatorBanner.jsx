@@ -1,7 +1,6 @@
 import * as React from 'react'
 import excavImg from '../../assets/excavator.jpg'
-
-
+import * as customCSS from '../../css/custom.css'  // react bootstrap
 
 export default function ExcavatorBanner() {
   return (
