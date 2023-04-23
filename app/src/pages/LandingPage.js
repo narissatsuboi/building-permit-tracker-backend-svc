@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import Billboard from '../components/index/Billboard.jsx'
 import Grid from '@mui/material/Unstable_Grid2'
-import { Container } from '@mui/material'
+import { Container, Box } from '@mui/material'
 import { Card } from '@mui/material'
 import { Image } from 'mui-image'
 
 export default function Home() {
 
     return(
-        <Container sx={{mt: 10}} disableGutters>
-            <Container disableGutters>
+        <Box disableGutters>
+            {/* <Container disableGutters>
                 <Grid 
                     container
                     alignItems="center"
@@ -32,12 +32,11 @@ export default function Home() {
                         Clever description of what tracki does here
                     </Grid>
                 </Grid>
-            </Container>
-            <Container disableGutters sx={{mt: 10}}>
+            </Container> */}
+            <Box disableGutters >
                 <Image src={require('../assets/excavator.jpg')}/>
-            </Container>
-
-       </Container>
+            </Box>
+       </Box>
    )
 }
 
