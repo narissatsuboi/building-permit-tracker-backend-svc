@@ -6,7 +6,7 @@ import { ThemeProvider } from '@mui/material/styles'
 
 // pages
 import ErrorPage from './pages/ErrorPage.jsx'
-import Index from './pages/LandingPage'
+import Index from './LandingPage'
 import Records, { loader as recordLoader } from './pages/records/RecordsPage'
 
 // layouts
