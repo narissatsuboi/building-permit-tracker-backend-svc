@@ -9,7 +9,7 @@ export default function Hero () {
     display: 'flex',
     justifyContent: 'center',
     gap: theme.spacing(5),
-    marginTop: theme.spacing(3),
+    // marginTop: theme.spacing(0),
     marginLeft: theme.spacing(3),
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
