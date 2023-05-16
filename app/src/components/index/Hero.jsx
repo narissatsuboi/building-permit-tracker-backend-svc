@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Box, Button, styled, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import Navbar from '../layout/Navbar'
+import heroImg from '../../assets/heroimg.jpg'
 
 export default function Hero () {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -63,11 +64,11 @@ export default function Hero () {
           </Box>
 
           <Box sx={{ flex: '1.25' }}>
-            {/* <img
+            <img
               src={heroImg}
               alt='heroImg'
-              style={{ maxWidth: '100%', marginBottom: '2rem' }}
-            /> */}
+              style={{ maxWidth: '100%', marginBottom: '2rem', opacity: 0.25 }}
+            />
           </Box>
         </CustomBox>
       </Container>
