@@ -3,10 +3,10 @@ import { createTheme } from '@mui/material/styles'
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#ffffff',
+            main: '#fff',
         },
         secondary: {
-            main: '#CED4DA',
+            main: '#000',
         },
         status: {
             blue: 'blue',
@@ -19,6 +19,7 @@ const theme = createTheme({
 
     },
     typography: {
+        fontSize: 12,
         fontFamily: [
             'Inter',
             'sans-serif',
