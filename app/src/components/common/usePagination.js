@@ -1,4 +1,3 @@
-import { all } from 'axios'
 import React, { useState } from 'react'
 
 export default function usePagination(data, itemsPerPage) {
@@ -6,11 +5,9 @@ export default function usePagination(data, itemsPerPage) {
 
     const maxPage = Math.ceil(data.length / itemsPerPage)
 
-
     function currentData() {
         const begin = (currentPage - 1) * itemsPerPage
         const end = begin + itemsPerPage
-        console.log('begin ' + begin + ' end ' + end)
         return data.slice(begin, end)
     }
 
@@ -28,4 +25,3 @@ export default function usePagination(data, itemsPerPage) {
     } 
     return { onNext, onPrev, onJump, currentData, currentPage, maxPage }
 }
-
