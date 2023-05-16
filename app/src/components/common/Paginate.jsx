@@ -16,13 +16,14 @@ export default function Paginate ({ data }) {
   }
 
   return (
-    <>
+    <Box
+      marginX={3}
+    >
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
-        justifyContent='center'
-        marginTop={3}
+        justifyContent='left'
       >
         {PAGINATED_DATA.currentData().map(record => {
           return (
@@ -40,6 +41,6 @@ export default function Paginate ({ data }) {
         shape='rounded'
         onChange={handlePageChange}
       ></Pagination>
-    </>
+    </Box>
   )
 }
