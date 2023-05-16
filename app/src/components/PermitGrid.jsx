@@ -1,6 +1,7 @@
 import * as React from 'react'
 import PermitCard from './PermitCard'
 import Grid from '@mui/material/Unstable_Grid2'
+import Paginate from './common/Paginate.jsx'
 
 export default function PermitGrid ({ records }) {
   return (
