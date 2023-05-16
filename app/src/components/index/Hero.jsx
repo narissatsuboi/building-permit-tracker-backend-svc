@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { Box, Button, styled, Typography } from '@mui/material'
 import { Container } from '@mui/system'
+import { Link } from 'react-router-dom'
 import Navbar from '../layout/Navbar'
+import CustomButton from '../common/CustomButton'
 import heroImg from '../../assets/heroimg.jpg'
 
-export default function Hero () {
+export default function Hero ({ theme }) {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
@@ -44,25 +46,25 @@ export default function Hero () {
                 mb: 4
               }}
             >
-              Welcome to tracki
+              Dig efficiency? Try tracki. 
             </Typography>
             <Title variant='h1'>
-              Close the loop on your building permits
+              tracki monitors your permits for you
             </Title>
             <Typography
               variant='body2'
               sx={{ fontSize: '18px', color: 'secondary.main', my: 4 }}
             >
-              Visualize permit status' and get notified when they change. 
+              Visualize permit status' and get notified when something changes. 
             </Typography>
-            {/* <CustomButton
-              backgroundColor='#0F1B4C'
-              color='#fff'
-              buttonText='More About Us'
-              heroBtn={true}
-            /> */}
+            <CustomButton
+              // href='/demo'
+              backgroundColor='#43AA8B'
+              color="#fff"
+              buttonText='Try the demo'
+              heroBtn={true} 
+            />
           </Box>
-
           <Box sx={{ flex: '1.25' }}>
             <img
               src={heroImg}
