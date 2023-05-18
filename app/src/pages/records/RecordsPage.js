@@ -13,7 +13,8 @@ export default function Records () {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          height: '100vh'
+          height: '100vh', 
+          paddingX: 5
         }}
       >
         <SectionHeader title='Card View' />
