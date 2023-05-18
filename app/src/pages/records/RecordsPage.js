@@ -1,14 +1,25 @@
 import * as React from 'react'
 import { useLoaderData } from 'react-router-dom'
-import axios from 'axios'
-import PermitGrid from '../../components/PermitGrid'
 import { Box } from '@mui/material'
+import axios from 'axios'
 import Paginate from '../../components/common/Paginate'
+import SectionHeader from '../../components/common/SectionHeader'
 
 export default function Records () {
   let allRecords = useLoaderData()
-return (
-    <Paginate data={allRecords.data}></Paginate>
+  return (
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          height: '100vh', 
+          paddingX: 5
+        }}
+      >
+        <SectionHeader title='Card View' />
+        <Paginate data={allRecords.data}></Paginate>
+      </Box>
   )
 }
 

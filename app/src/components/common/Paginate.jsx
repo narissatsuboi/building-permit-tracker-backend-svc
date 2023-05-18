@@ -16,24 +16,12 @@ export default function Paginate ({ data }) {
   }
 
   return (
-    <Box 
-      sx ={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        height: '100vh',
-      }}
-      >
+    <>
       {/* Card Grid */}
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
-        sx={{
-          border: '3px solid red',
-          justifyContent: 'center',
-      
-        }}
       >
         {PAGINATED_DATA.currentData().map(record => {
           return (
@@ -56,6 +44,6 @@ export default function Paginate ({ data }) {
           onChange={handlePageChange}
         ></Pagination>
       </Box>
-    </Box>
+    </>
   )
 }
