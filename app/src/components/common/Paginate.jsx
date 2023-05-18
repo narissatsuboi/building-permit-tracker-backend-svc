@@ -6,7 +6,7 @@ import PermitCard from '../PermitCard'
 
 export default function Paginate ({ data }) {
   const [currentPage, setCurrentPage] = useState(1)
-  const PER_PAGE = 16
+  const PER_PAGE = 24
   const count = Math.ceil(data.length / PER_PAGE)
   const PAGINATED_DATA = usePagination(data, PER_PAGE)
 
@@ -16,14 +16,24 @@ export default function Paginate ({ data }) {
   }
 
   return (
-    <Box
-      marginX={3}
-    >
+    <Box 
+      sx ={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100vh',
+      }}
+      >
+      {/* Card Grid */}
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
-        justifyContent='left'
+        sx={{
+          border: '3px solid red',
+          justifyContent: 'center',
+      
+        }}
       >
         {PAGINATED_DATA.currentData().map(record => {
           return (
@@ -33,14 +43,19 @@ export default function Paginate ({ data }) {
           )
         })}
       </Grid>
-      <Pagination
-        count={count}
-        size='large'
-        page={currentPage}
-        variant='outlined'
-        shape='rounded'
-        onChange={handlePageChange}
-      ></Pagination>
+      {/* Pagination */}
+      <Box sx={{ 
+        display: 'grid',
+        justifyContent: 'center',
+        }}>
+        <Pagination
+          count={count}
+          size='small'
+          page={currentPage}
+          shape='rounded'
+          onChange={handlePageChange}
+        ></Pagination>
+      </Box>
     </Box>
   )
 }
