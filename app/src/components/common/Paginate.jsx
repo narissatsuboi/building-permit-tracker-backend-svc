@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import { Pagination } from '@mui/material'
 import usePagination from './usePagination' // custom hook
 import PermitCard from '../PermitCard'
@@ -16,14 +16,21 @@ export default function Paginate ({ data }) {
   }
 
   return (
-    <Box
-      marginX={3}
-    >
+    <Box 
+      sx ={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100vh',
+      }}
+      >
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
-        justifyContent='left'
+        sx = {{
+          justifyContent: 'flex-start',
+        }}
       >
         {PAGINATED_DATA.currentData().map(record => {
           return (
@@ -33,14 +40,19 @@ export default function Paginate ({ data }) {
           )
         })}
       </Grid>
-      <Pagination
-        count={count}
-        size='large'
-        page={currentPage}
-        variant='outlined'
-        shape='rounded'
-        onChange={handlePageChange}
-      ></Pagination>
+      <Box sx={{ 
+        display: 'grid',
+        alignItems: 'center',
+        justifyContent: 'center',
+        }}>
+        <Pagination
+          count={count}
+          size='small'
+          page={currentPage}
+          shape='rounded'
+          onChange={handlePageChange}
+        ></Pagination>
+      </Box>
     </Box>
   )
 }
