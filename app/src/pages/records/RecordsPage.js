@@ -1,32 +1,23 @@
 import * as React from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { Box } from '@mui/material'
 import axios from 'axios'
+import PageLayoutBox from '../../components/common/PageLayoutBox'
 import Paginate from '../../components/common/Paginate'
 import SectionHeader from '../../components/common/SectionHeader'
 
 export default function Records () {
   let allRecords = useLoaderData()
   return (
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          height: '100vh', 
-          paddingX: 5
-        }}
-      >
+      <PageLayoutBox>
         <SectionHeader title='Card View' />
         <Paginate data={allRecords.data}></Paginate>
-      </Box>
+      </PageLayoutBox>
   )
 }
 
 export const loader = async () => {
   try {
     const res = await axios.get('http://localhost:5000/records/dev')
-    // console.log(res.data)
     return res.data
   } catch (error) {
     console.log(error)
