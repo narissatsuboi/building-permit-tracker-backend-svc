@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Box, Button, styled, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import { Link } from 'react-router-dom'
 import Navbar from '../layout/Navbar'
 import CustomButton from '../common/CustomButton'
 import heroImg from '../../assets/heroimg.jpg'
