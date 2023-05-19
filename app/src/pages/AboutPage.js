@@ -26,7 +26,7 @@ export default function AboutPage ({theme}) {
             <br></br>
             She decided to use her free time to try to make keeping track of construction permitting 
             less tedious. 
-            You can learn more about the code behind this project <a href="https://github.com/narissatsuboi/tracki" target="_blank">here</a>. 
+            You can learn more about the code behind this project <a href="https://github.com/narissatsuboi/tracki" target="_blank" rel="noreferrer">here</a>. 
           </Typography>
           <Typography variant='body2'sx={{variant: 'body', height: '35%', width: '75%', backgroundColor: 'white'}}>
           </Typography>
