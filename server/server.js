@@ -10,6 +10,10 @@ mongoose.set('strictQuery', true);
 const logger = require('./utils/logger');
 const port = process.env.PORT || 5000;
 const morganMiddleware = require('./middleware/morgan.mw');
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const app = express();
 
 app.use(cors());
