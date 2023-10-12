@@ -3,10 +3,6 @@
 
 tracki is an api that aggregates building permit records and ultimately will return them to a permit tracking dashboard. This personal project aims to help reduce the amount of time it takes users to navigate a clunky government website and manually note status information on multiple construction projects. 
 
-- [Features](#features)
-- [API Documentation](#api-documentation)
-- [Built with](#built-with)
-- [License](#license)
 ## Features
 - **API Endpoints:** Provides a set of well-defined RESTful APIs for transforming and interacting with permit data.
 
