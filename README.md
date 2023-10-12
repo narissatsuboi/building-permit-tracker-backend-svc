@@ -18,12 +18,6 @@ For detailed API documentation and available endpoints, refer to API_DOCUMENTATI
 - Database: MongoDB, Mongoose 
 - Testing: Jest, supertest 
 
-## Roadmap 
-- [x] Database and data model 
-- [x] GET by permit number, GET by permit numbers 
-- [ ] GET by user's bookmarked projcets, 
-- [ ] Deploy on AWS EC2 server 
-
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [git-repo-url]: <https://github.com/narissatsuboi/tracki.git>
